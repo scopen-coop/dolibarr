@@ -1,8 +1,6 @@
 name: Set reviewer for v18
 on:
   workflow_dispatch:
-    branches:
-      - "18.0"
   pull_request:
     types:
       - opened
@@ -43,8 +41,8 @@ jobs:
         url: "https://github.com/scopen-coop/dolibarr/pull/7"
       run: |
         echo We are there
-        gh pr edit "$url" --add-assignee marc-dll --add-reviewer marc-dll
-        gh pr merge "$url" --merge --auto
+        gh pr edit "$url" --add-assignee marc-dll
+        gh pr edit "$url" --add-reviewer marc-dll
       continue-on-error: true
 
     - name: Assign reviewer method 2
