@@ -41,8 +41,8 @@ jobs:
         url: "https://github.com/scopen-coop/dolibarr/pull/7"
       run: |
         echo We are there
+        echo gh pr edit "$url" --add-reviewer fhenry
+        gh pr edit "$url" --add-reviewer fhenry
         echo gh pr edit "$url" --add-reviewer marc-dll
         gh pr edit "$url" --add-reviewer marc-dll
-        echo gh pr edit "$url" --add-reviewer FHenry
-        gh pr edit "$url" --add-reviewer FHenry
       continue-on-error: true
