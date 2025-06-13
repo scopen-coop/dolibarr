@@ -1,6 +1,8 @@
 name: Set reviewer for v18
 on:
   workflow_dispatch:
+    branches:
+      - "18.0"
   pull_request:
     types:
       - opened
