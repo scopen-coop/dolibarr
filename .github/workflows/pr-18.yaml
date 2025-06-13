@@ -40,7 +40,7 @@ jobs:
     - name: Assign reviewer method 1
       env:
         GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
-        url: ${{ github.event.pull_request.html_url }}
+        url: "https://github.com/scopen-coop/dolibarr/pull/7"
       run: |
         echo We are there
         gh pr edit "$url" --add-assignee marc-dll --add-reviewer marc-dll
