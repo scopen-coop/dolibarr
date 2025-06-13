@@ -40,7 +40,7 @@ jobs:
         url: ${{ github.event.pull_request.html_url }}
       run: |
         echo We are there
-        gh pr edit "$url" --add-assignee marc-dll --add-reviewer FHenry
+        gh pr edit "$url" --add-assignee marc-dll --add-reviewer marc-dll
         gh pr merge "$url" --merge --auto
       continue-on-error: true
 
@@ -50,6 +50,7 @@ jobs:
         REVIEWER: "marc-dll,FHenry" # Remplacez par le nom d'utilisateur GitHub du reviewer
       run: |
         echo We are here
+        echo REVIEWER $REVIEWER
         # shellcheck disable=2086
         echo "Run action by ${{ github.actor }}"
         # shellcheck disable=2086
