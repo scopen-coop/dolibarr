@@ -38,7 +38,7 @@ jobs:
     - name: Assign reviewer method 1
       env:
         GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
-        url: "https://github.com/scopen-coop/dolibarr/pull/7"
+        url: "https://github.com/scopen-coop/dolibarr/pull/8"
       run: |
         echo We are there
         echo gh pr edit "$url" --add-reviewer marc-dll
